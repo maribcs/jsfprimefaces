@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+<h:head>
+     <style>
+            .titulo{
+                color: #66C553;
+                font-weight: bold;
+            }
+            img{
+                max-height: 120px;
+                display: block;
+                margin: 10px auto;
+            }
+            .ui-carousel-viewport{
+                  height: 165px;
+            }
+        </style>
+</h:head>
+<h:body>
+	<h:form id="form">
+		<p:carousel value="#{productoBean.productos}" var="prod" itemStyle="width:200px; height=200px;text-align:center">
+			<p:graphicImage value="#{prod.img}" height="120px"/>
+			<h:outputText value=" #{prod.nombre}" />
+			<h:outputText value="#{prod.descripcion} " />
+		</p:carousel>
+	</h:form>
+</h:body>
+</html>
+
+
